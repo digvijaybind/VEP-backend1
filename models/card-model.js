@@ -14,13 +14,13 @@ const cardSchema = new Schema({
   category: {
     type: String,
     enum: [
-      "Agriculture",
-      "Automobile",
-      "Chemical",
-      "Dryfruits",
-      "Furniture",
-      "science&Technology",
-      "TextTiles",
+      "agriculture",
+      "automobile",
+      "chemical",
+      "dryfruits",
+      "furniture",
+      "science-Technology",
+      "textTiles",
     ],
   },
 

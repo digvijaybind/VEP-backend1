@@ -23,6 +23,7 @@ const corsOption = {
   credentials: true,
   origin: [
     "http://localhost:4000",
+    "http://localhost:3000",
     "http://localhost:8080",
     "http://localhost:8000",
   ],

@@ -73,7 +73,7 @@ class UserController {
       name,
       email,
     } = await userService.findUser({ email: requestEmail });
-    if (!userId) return next(new ErrorHandler("No User Found", 404));
+    if (!userId) return next(new ErrorHandler("No User Found", 404)); //not found
     await otpService.removeOtp(userId);
     const otp = await otpService.generateOtp();
     const data = {

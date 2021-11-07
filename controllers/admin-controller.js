@@ -11,10 +11,10 @@ class AdminController {
       const image = o.filename;
       return { image };
     });
-
+    const category = req.body.category && req.body.category.toLowerCase();
     const Stall = {
       company: req.body.company,
-      category: req.body.category,
+      category: category,
       images: images,
       video: req.files.video && req.files.video[0].filename,
       logo: req.files.logo && req.files.logo[0].filename,

@@ -7,8 +7,8 @@ class ManagerController {
   getCards = async (req, res) => {
     console.log(req.user);
     console.log(req.abc);
-    const { Category } = req.params;
-    let cards = await cardService.getCards(Category ? { Category } : null);
+    const { category } = req.params;
+    let cards = await cardService.getCards(category ? { category } : null);
     if (!cards || cards.length < 1)
       return res.status(404).json({ success: false, message: "No Card Found" });
     cards = cards.map((o) => {

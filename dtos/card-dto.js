@@ -20,7 +20,9 @@ class CardDto {
       ? `${process.env.WEBSITE_URL}storage/images/logo/${card.logo}`
       : null;
     this.company = card.company;
-    this.category = card.category;
+    this.category =
+      card.category &&
+      card.category.charAt(0).toUpperCase() + card.category.slice(1);
     this.video = card.video
       ? `http://localhost:5500/storage/videos/${card.video}`
       : null;
